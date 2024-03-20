@@ -3,10 +3,9 @@ from config import model_params, pipeline_params
 
 
 def get_model():
-    """_summary_
-
+    """
     Returns:
-        _type_: _description_
+        _type_: transformers.WhisperForConditionalGeneration
     """
     model = AutoModelForSpeechSeq2Seq.from_pretrained(
         model_params["model_id"],
@@ -20,20 +19,18 @@ def get_model():
 
 
 def get_processor():
-    """_summary_
-
+    """
     Returns:
-        _type_: _description_
+        _type_: transformers.WhisperProcessor
     """
     processor = AutoProcessor.from_pretrained(model_params["model_id"])
     return processor
 
 
 def get_pipeline():
-    """_summary_
-
+    """
     Returns:
-        _type_: _description_
+        _type_: transformers.AutomaticSpeechRecognitionPipeline
     """
     model = get_model()
     processor = get_processor()
