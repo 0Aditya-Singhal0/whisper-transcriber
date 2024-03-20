@@ -13,7 +13,9 @@ Ensure you have Python installed on your system. This project has been set up an
 2. Navigate to the project directory.
 3. Install the required dependencies using the following command:
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 
 **Note for macOS Users:** During installation, you may encounter issues with NVIDIA CUDA-related packages and `bitsandbytes`. These packages are not supported on macOS and should be commented out in the `requirements.txt` file before proceeding with the installation.
@@ -24,12 +26,14 @@ All configurations can be customized in the `config.py` file. This includes chan
 ### Running the Transcription
 To transcribe an audio file, use the following command:
 
-```python main.py --audio-path /path/to/file```
+```
+python main.py --audio-path /path/to/file
+```
 
 Ensure you replace `/path/to/file` with the actual path to the audio file you wish to transcribe.
 
 ## Support
-For more detailed information about configurations and usage, refer to the [Hugging Face documentation](https://huggingface.co/docs).
+For more detailed information about configurations and usage, refer [here](https://huggingface.co/docs/transformers/v4.39.0/en/model_doc/whisper).
 
 ## Contributing
 We welcome contributions! Please feel free to submit pull requests or open issues to improve the project or fix problems.
