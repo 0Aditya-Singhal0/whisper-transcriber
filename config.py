@@ -15,7 +15,9 @@ model_params = {
     "torch_dtype": torch.float16 if torch.cuda.is_available() else torch.float32,
     "low_cpu_mem_usage": True,
     "use_safetensors": True,
-    "attn_implementation": "flash_attention_2" if torch.cuda.is_available() else "eager",
+    "attn_implementation": "flash_attention_2"
+    if torch.cuda.is_available()
+    else "eager",
 }
 
 # Pipeline params for using the pipeline
@@ -27,10 +29,9 @@ pipeline_params = {
 }
 
 generation_args = {
-    # Set to True if you want to return timestamps. 
+    # Set to True if you want to return timestamps.
     # Set to 'word' if you want word based stamps but disable attention implementation since WhisperFlashAttention2 attention does not support output_attentions
     "return_timestamps": False,
-    
     #  Only use if you are working with multiple languages
     "generate_kwargs": {
         "language": "english",
