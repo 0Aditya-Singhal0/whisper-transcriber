@@ -16,7 +16,10 @@ Ensure you have Python installed on your system. This project has been set up an
 ```
 pip install -r requirements.txt
 ```
-
+**Note:**  Its recommened by the Huggingface page to install flash attention via the following
+```
+pip install flash-attn --no-build-isolation
+```
 
 **Note for macOS Users:** During installation, you may encounter issues with NVIDIA CUDA-related packages and `bitsandbytes`. These packages are not supported on macOS and should be commented out in the `requirements.txt` file before proceeding with the installation.
 
