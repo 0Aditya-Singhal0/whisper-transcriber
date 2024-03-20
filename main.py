@@ -17,4 +17,5 @@ result = pipe(
     # generate_kwargs=generation_args["generate_kwargs"],
 )
 
-print(result)
+with open("output.txt", "w") as file:
+    file.write(result['text'])
