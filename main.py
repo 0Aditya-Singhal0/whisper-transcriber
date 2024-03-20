@@ -3,8 +3,7 @@ from utils import get_pipeline
 from config import generation_args
 
 # File path to your audio file
-# audio_path = "path/to/your/audio/file"
-audio_path = "/home/tagglabs/Desktop/code/assets/voices/sampled_aj_voice.mp3"
+audio_path = "path/to/your/audio/file"
 
 # process audio
 audio, sampleRate = librosa.load(audio_path, sr=16000) # Whisper is trained to use 16kHz sampling rate
